@@ -40,6 +40,23 @@ module.exports = function(grunt) {
 					]
 				}]
 			}
+		},
+		copy: {
+			server: {
+				files: [{
+					expand: true,
+					cwd: 'server/',
+					dest: 'node/',
+					src: [
+						'**/*',
+						'!public/**',
+						'!node_modules/**',
+						'!bower.json',
+						'!gruntfile.js',
+						'!package.json'
+					]
+				}]
+			}
 		}
 	});
 	
@@ -52,6 +69,7 @@ module.exports = function(grunt) {
 	]);
 	
 	grunt.registerTask('build', [
+		'copy:server',
 		'exec:clientbuild'
 	]);
 	
