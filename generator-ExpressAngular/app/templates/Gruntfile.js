@@ -28,7 +28,12 @@ module.exports = function(grunt) {
 			},
 			clientbuild: {
 				cmd: 'grunt --gruntfile client/Gruntfile.js build'
-			}
+			},
+            
+            bowerinstall: {
+                cmd: 'bower install',
+                cwd: 'client'
+            }
 		},
 		cleanup: {
 			node: {
@@ -65,7 +70,8 @@ module.exports = function(grunt) {
 	grunt.registerTask('install', [
 		'exec:clientinstall',
 		'exec:serverinstall',
-		'exec:nodeinstall'
+		'exec:nodeinstall',
+        'exec:bowerinstall'
 	]);
 	
 	grunt.registerTask('build', [
