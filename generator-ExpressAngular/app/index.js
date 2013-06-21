@@ -37,7 +37,7 @@ ExpressangularGenerator.prototype.askFor = function askFor() {
 };*/
 
 ExpressangularGenerator.prototype.app = function app() {
-  this.copy('_package.json', 'package.json');
+  this.copy('package.json', 'package.json');
   this.copy('Gruntfile.js', 'Gruntfile.js');
 };
 
