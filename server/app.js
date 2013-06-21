@@ -14,7 +14,7 @@ var app = express();
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
-  app.set('view engine', 'jade');
+  app.set('view engine', 'ejs');
   app.use(express.favicon());
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
@@ -27,12 +27,7 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-app.get('/', function(req, res) {
-	res.sendfile('public/index.html');
-});
-app.get('/users', function(req, res) {
-	res.send("This is new");
-});
+app.get('/users', user.index);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
