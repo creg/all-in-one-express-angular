@@ -44,14 +44,7 @@ ExpressangularGenerator.prototype.app = function app() {
 
 ExpressangularGenerator.prototype.client = function client() {
   this.mkdir('client');
-  this.copy('client/.bowerrc', 'client/.bowerrc');
-  this.copy('client/.editorconfig', 'client/.editorconfig');
-  this.copy('client/.jshintrc', 'client/.jshintrc');
-  this.copy('client/component.json', 'client/component.json');
-  this.copy('client/Gruntfile.js', 'client/Gruntfile.js');
-  this.copy('client/karma.conf.js', 'client/karma.conf.js');
-  this.copy('client/karma-e2e.conf.js', 'client/karma-e2e.conf.js');
-  this.copy('client/package.json', 'client/package.json');
+  this.directory('client', 'client');
 };
 
 ExpressangularGenerator.prototype.server = function server() {
