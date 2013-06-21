@@ -1,0 +1,37 @@
+{
+  "name": "generator-expressangular",
+  "version": "0.0.0",
+  "description": "A generator for Yeoman",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "homepage": "https://github.com/BDesta/generator-expressangular",
+  "bugs": "https://github.com/BDesta/generator-expressangular/issues",
+  "author": {
+    "name": "",
+    "email": "",
+    "url": "https://github.com/BDesta"
+  },
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bdesta/generator-expressangular.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "yeoman-generator": "~0.12.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.10.0"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
+}
