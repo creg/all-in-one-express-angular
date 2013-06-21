@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 				cmd: 'grunt --gruntfile client/Gruntfile.js build'
 			}
 		},
-		clean: {
+		cleanup: {
 			node: {
 				files: [{
 					src: [
@@ -43,6 +43,8 @@ module.exports = function(grunt) {
 		}
 	});
 	
+	grunt.renameTask('clean', 'cleanup');
+	
 	grunt.registerTask('install', [
 		'exec:clientinstall',
 		'exec:serverinstall',
@@ -53,8 +55,8 @@ module.exports = function(grunt) {
 		'exec:clientbuild'
 	]);
 	
-	grunt.registerTask('cleanit', [
-		'clean:node'
+	grunt.registerTask('clean', [
+		'cleanup:node'
 	]);
 
 	grunt.registerTask('default', ['build']);
