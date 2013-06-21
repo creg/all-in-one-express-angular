@@ -63,6 +63,7 @@ ExpressangularGenerator.prototype.server = function server() {
 
 ExpressangularGenerator.prototype.node = function node() {
   this.mkdir('node');
+  this.directory('node', 'node');
 };
 
 ExpressangularGenerator.prototype.projectfiles = function projectfiles() {

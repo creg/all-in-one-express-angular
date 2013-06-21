@@ -11,7 +11,7 @@ module.exports = function (grunt) {
   // configurable paths
   var yeomanConfig = {
     app: 'app',
-    dist: '../server/public'
+    dist: '../node/public'
   };
 
   try {
@@ -77,9 +77,6 @@ module.exports = function (grunt) {
       }
     },
     clean: {
-      options:{
-        force: true
-      },
       dist: {
         files: [{
           dot: true,
