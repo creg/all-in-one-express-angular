@@ -5,7 +5,9 @@
   "main": "Gruntfile.js",
   "dependencies": {
     "grunt-exec": "~0.4.1",
-    "grunt": "~0.4.1"
+    "grunt": "~0.4.1",
+	"grunt-contrib-clean": "~0.4",
+    "matchdep": "~0.1.1"
   },
   "devDependencies": {},
   "scripts": {
