@@ -16,4 +16,6 @@ npm-debug.log
 server/public/*
 server/node_modules
 client/node_modules
+node/*
+!node/package.json
 node_modules
